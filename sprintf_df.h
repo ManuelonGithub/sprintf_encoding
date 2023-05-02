@@ -5,6 +5,15 @@
 
 #include <stdarg.h>
 
+/**
+ * @brief deferred sprintf - va_list edition!
+ * @param	dst byte buffer to insert processed data into - output is not a c-string!
+ * @param	fmt printf format string
+ * @param	args variable list of arguments to be processed according to the format
+ * @return	length of the content in dst
+ * @note	This function is fully thread-safe/reetrant.
+ * @warning	dst will not be c-string compatible. 
+ */
 int vsprintf_df(char* buf, const char *fmt, va_list args);
 
 /**
